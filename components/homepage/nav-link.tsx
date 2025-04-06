@@ -1,12 +1,12 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 
 
-interface link {
-    text: string
-}
+// interface link {
+//     text: string
+
 const NavLink = () => {
-    const [active, setIsActive] = useState(false)
+    // const [active, setIsActive] = useState(false)
     const links = [
       {
         title : "Home"
