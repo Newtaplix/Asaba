@@ -97,7 +97,7 @@ const About = () => {
             </div>
             <div className='mt-3'>
                 <h1 className="font-bold text-xl">Location</h1>
-                <p className='italic text-greay-500 flex gap-2'><MapPin/> 149 Main Street, Rosettenville, Johannesburg, South Africa</p>
+                <p className='italic text-greay-500 flex gap-2'><MapPin/> 861 Van Der Hoff road Pretoria, South Africa</p>
             </div>
         </div>
     </>
