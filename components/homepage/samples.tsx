@@ -2,6 +2,7 @@ import React from 'react'
 import SectionLabel from '../SectionLabel'
 import Image from 'next/image'
 
+
 const Samples = () => {
 
   
@@ -30,7 +31,7 @@ const Samples = () => {
                   <button className="w-full primary rounded-md bg-blue-500 text-white py-2">Buy Now</button>
               </div>
           </div>
-          <div className='border border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
+          <div className='border hidden md:block border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
               <div className="rounded-lg overflow-hidden hidden md:flex">
                 <Image src={"/Img3.jpg"} width={250} height={320} alt='preview'/>
               </div>
@@ -51,7 +52,7 @@ const Samples = () => {
                   <button className="w-full primary rounded-md bg-blue-500 text-white py-2">Buy Now</button>
               </div>
           </div>
-          <div className='border border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
+          <div className='border hidden md:block border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
               <div className="rounded-lg overflow-hidden hidden md:flex">
                 <Image src={"/Img3.jpg"} width={250} height={320} alt='preview'/>
               </div>
