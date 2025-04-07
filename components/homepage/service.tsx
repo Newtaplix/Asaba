@@ -17,9 +17,9 @@ const ServiceSpan = () => {
     
     useEffect(() => {
        if(isInView){
-        const controls = animate(count, 1500, { duration: 5})
+        const controls = animate(count, 900, { duration: 5})
         const control1 = animate(ProvinceCount, 9, { duration: 5})
-        const control2 = animate(TownsCount, 1000, { duration: 5})
+        const control2 = animate(TownsCount, 500, { duration: 5})
         return (
             () => (controls.stop(),
                     control1.stop(),
