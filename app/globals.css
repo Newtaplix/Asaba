@@ -26,7 +26,7 @@
   }
   .section-Label::before{
     background: conic-gradient(white, #6C63FF, transparent 180deg);
-    animation: rotation 3s linear infinite;
+    animation: rotation 5s linear infinite;
     @apply absolute h-[100%] w-[100%] left-0 content-[""]  
   }; 
   .price{
