@@ -1,10 +1,20 @@
 import React from 'react'
-import NavLink from './nav-link'
+
 
 const Navbar = () => {
   return (
-    <div className="w-full rounded-sm shadow-md border  py-2 border-gray-300 flex gap-4 text-center justify-center">
-          <NavLink/>
+    <div className="flex font-bold justify-between py-4 bg-black px-6 text-white">
+      <div>
+          <h1>Logo</h1>
+      </div>
+      <div>
+          <ul className="flex gap-3 text-white">
+            <li>Home</li>
+            <li>Shop</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+      </div>
     </div>
   )
 }

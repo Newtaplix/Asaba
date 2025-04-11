@@ -29,23 +29,15 @@
     animation: rotation 5s linear infinite;
     @apply absolute h-[100%] w-[100%] left-0 content-[""]  
   }; 
-  .price{
-    @apply relative rounded-lg overflow-hidden h-50 w-50
-  }
-
-  .price::before{
-    background: conic-gradient(white 0deg, gray 0deg, transparent 180deg);
-    animation: rotation 5s linear infinite;
-    @apply absolute h-[100%] w-[100%] left-0 content-[""]  
-  }
-
-  .price-content{
-    @apply absolute w-[calc(100%-4px)] h-[calc(100%-4px)] bg-orange-400 inset-0 mx-auto my-auto rounded-lg
-  }
-  
   .label-content{
     transition: all 0.5s linear;
     @apply absolute w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white justify-center flex items-center inset-0 mx-auto my-auto rounded-full
+  }
+  .para{
+    @apply text-gray-500 mb-5 text-xl md:text-2xl
+  }
+  .heading{
+    @apply font-bold mb-4 text-2xl md:text-3xl lg:text-5xl
   }
 }
 

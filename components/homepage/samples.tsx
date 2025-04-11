@@ -1,79 +1,24 @@
 import React from 'react'
-import SectionLabel from '../SectionLabel'
-import Image from 'next/image'
+
 
 
 const Samples = () => {
 
   
   return (
-    <div className='justify-center mt-20'>
-        <SectionLabel text='Prices'/>
-        <div className='mt-3 flex text-center gap-2 justify-center flex-col w-fit mx-auto md:flex-row'>
-          <div className='border border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
-              <div className="rounded-lg overflow-hidden hidden md:flex">
-                <Image src={"/Img3.jpg"} width={250} height={320} alt='preview'/>
-              </div>
-              <div className="rounded-lg overflow-hidden md:hidden">
-                <Image src={"/Img3.jpg"} width={350} height={380} alt='preview'/>
-              </div>
-              <div className='text-left'>
-                <h1 className='text-2xl font-bold text-gray-800'>Mustang</h1>
-                <p>203/55 R16</p>
-                <p className="text-2xl font-bold text-green-600">$120.00</p>
-                <ul className='text-sm text-gray-500 mt-3 list-disc list-inside'>
-                    <li>Long-lasting tread</li>
-                    <li>Fuel efficient</li>
-                    <li>Excellent wet grip</li>
-                </ul>
-              </div>
-              <div className="mt-2">
-                  <button className="w-full primary rounded-md bg-blue-500 text-white py-2">Buy Now</button>
-              </div>
-          </div>
-          <div className='border hidden md:block border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
-              <div className="rounded-lg overflow-hidden hidden md:flex">
-                <Image src={"/Img3.jpg"} width={250} height={320} alt='preview'/>
-              </div>
-              <div className="rounded-lg overflow-hidden md:hidden">
-                <Image src={"/Img3.jpg"} width={350} height={380} alt='preview'/>
-              </div>
-              <div className='text-left'>
-                <h1 className='text-2xl font-bold text-gray-800'>Mustang</h1>
-                <p>203/55 R16</p>
-                <p className="text-2xl font-bold text-green-600">$120.00</p>
-                <ul className='text-sm text-gray-500 mt-3 list-disc list-inside'>
-                    <li>Long-lasting tread</li>
-                    <li>Fuel efficient</li>
-                    <li>Excellent wet grip</li>
-                </ul>
-              </div>
-              <div className="mt-2">
-                  <button className="w-full primary rounded-md bg-blue-500 text-white py-2">Buy Now</button>
-              </div>
-          </div>
-          <div className='border hidden md:block border-gray-500/10 shadow-lg w-fit bg-white rounded-lg p-3'>
-              <div className="rounded-lg overflow-hidden hidden md:flex">
-                <Image src={"/Img3.jpg"} width={250} height={320} alt='preview'/>
-              </div>
-              <div className="rounded-lg overflow-hidden md:hidden">
-                <Image src={"/Img3.jpg"} width={350} height={380} alt='preview'/>
-              </div>
-              <div className='text-left'>
-                <h1 className='text-2xl font-bold text-gray-800'>Mustang</h1>
-                <p>203/55 R16</p>
-                <p className="text-2xl font-bold text-green-600">$120.00</p>
-                <ul className='text-sm text-gray-500 mt-3 list-disc list-inside'>
-                    <li>Long-lasting tread</li>
-                    <li>Fuel efficient</li>
-                    <li>Excellent wet grip</li>
-                </ul>
-              </div>
-              <div className="mt-2">
-                  <button className="w-full primary rounded-md bg-blue-500 text-white py-2">Buy Now</button>
-              </div>
-          </div>
+    <div className="w-full py-3">
+        <div className='w-[60%] mx-auto text-left p-3'>
+            <p className='para mb-5'>Unlock the Power of Tires</p>
+            <h1 className='heading'>Tire Technology Reimagined</h1>
+            <p className='para'>Unlock the Secrets of Tire Performance. Explore our Cutting-Edge Innovations</p>
         </div>
+
+        <div className="flex gap-5 px-28">
+            <div className="flex-1 bg-gray-900/30 h-100"></div>
+            <div className="flex-1 bg-gray-900/30 h-100"></div>
+            <div className="flex-1 bg-gray-900/30 h-100"></div>
+        </div>
+
     </div>
   )
 }

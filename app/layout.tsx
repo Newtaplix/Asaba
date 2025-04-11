@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className=" w-full px-2 md:px-0 md:w-[60%] mx-auto overflow-x-hidden">
+        <div className=" w-full overflow-x-hidden">
          {children}
         </div>
       </body>
