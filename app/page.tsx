@@ -7,6 +7,8 @@ import FooterLV from '@/components/homepage/footer'
 import ImageDiv from '@/components/homepage/Images'
 import Preview from '@/components/homepage/preview'
 import Partners from '@/components/homepage/Partners'
+import Road from '@/components/homepage/road'
+import CallToAction from '@/components/homepage/call'
 const page = () => {
   return (
     <>
@@ -17,7 +19,8 @@ const page = () => {
       <ImageDiv/>
       <Preview/>
       <Partners/>
-
+      <Road/>
+      <CallToAction/>
       <FooterLV/>
     </>
   )

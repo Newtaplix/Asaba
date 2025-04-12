@@ -3,11 +3,12 @@ import React from 'react'
 
 
 
+
 const HeroSection = () => {
 
   return (
     <div className='h-screen w-full flex items-center'>
-        <div className="my-80 w-full text-center justify-center flex flex-col items-center h-[60%] bg-gray-300">
+        <div className="my-80 w-full text-center justify-center flex flex-col items-center h-[60%] bg-gray-300 relative">
               <div>
                   <h1 className="heading">Discover The Perfect</h1>
               </div>
