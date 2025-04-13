@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="flex font-bold justify-between py-4 bg-black px-6 text-white">
       <div>
-          <h1>Logo</h1>
+          <h1 className='text-xl md:text-2xl'>Asaba Auto Trading</h1>
       </div>
       <div>
           <ul className="flex gap-3 text-white">
