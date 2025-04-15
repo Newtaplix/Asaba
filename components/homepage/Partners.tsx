@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Partners = () => {
   return (
-    <div className='text-center px-28 justify-center mt-20'>
+    <div className='text-center w-full justify-center mt-20'>
         <p className='para'>Our Trusted Partners</p>
         <h1 className="heading">Powering The Future Of Mobility</h1>
         <p className="para">Driving Innovation: Discover the Synergy of Our Tire Solutions and Renowned Partner Brands</p>

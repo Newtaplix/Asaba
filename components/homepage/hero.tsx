@@ -1,44 +1,37 @@
 'use client'
 import React from 'react'
 import { ShoppingCart } from 'lucide-react'
-import Image from 'next/image'
-
+import Wheel from '../Wheel'
+import Link from 'next/link'
 
 
 const HeroSection = () => {
 
   return (
-    <div className='h-screen w-full flex items-center'>
-        <div className=" w-full text-center justify-center flex flex-col items-center h-full bg-transparent relative overflow-hidden">
-             <div>
-                <video autoPlay muted loop playsInline className='w-full h-full ' src="/home/vidbg.mp4"></video>
+    <div className='h-screen w-full bg-black'>
+        <div className=" w-full bg-gray-300 text-center justify-center flex flex-col items-center h-full relative overflow-hidden">
+             <div className='w-full h-full bg-red-500'>
+                <video autoPlay muted loop playsInline className='w-full' src="/home/vidbg.mp4"></video>
              </div>
-              <div className='absolute w-full h-full bg-transparent text-left flex items-center absolute px-4'>
-                <div className='w-1/2 text-white'>
-                     <div>
-                          <h1 className="font-bold text-white text-6xl italic">Built for Every Road</h1>
-                      </div>
+              <div className='mx-auto w-300 h-full bg-transparent text-left flex items-center absolute'>
+                <div className='flex justify-between'>
+                  <div className='max-w-200 text-white'>
                       <div>
-                          <p>Trusted by Drivers Everywhere.</p>
-                      </div>
-                      <div>
-                          <p className=''>Discover durable, high performance tires for any vehicle and road condition</p>
-                      </div>
+                            <h1 className="font-bold text-white text-7xl">Smart Wheels for a Smarter World</h1>
+                        </div>
+                        <div>
+                            <p className='text-xl'>Discover durable, high performance tires for any vehicle and road condition</p>
+                        </div>
+                        <button className='px-2 rounded-full py-2 border-2 border-gray-500 backdrop-blur-sm mt-5'>Discover More</button>
+                  </div>
+                  <Wheel/>
                 </div>
-              </div>
-              <div className='absolute bottom-2 bg-white justify-center flex gap-4 w-1/2 rounded-md p-4'>
+                <div className='absolute bottom-2 bg-white w-full justify-center flex gap-4 w-1/2 rounded-md p-4'>
                   <button className='px-6 py-2 rounded-md bg-black text-white font-bold'>Explore Tires</button>
                   <button className='px-6 py-2 rounded-md bg-black text-white font-bold'>Tires</button>
-                  <button className='px-6 py-2 rounded-md bg-black text-white font-bold flex gap-2 items-center'>Shop <ShoppingCart/></button>
-              </div>
-               <div className="absolute mt-4 p-2 flex gap-4 mx-auto w-[50%] justify-center">
-                    
-                    <div className="h-20 rounded-md flex-1 relative">
-                      <Image src={"/home/price1.jpg"} fill alt='svg'/>
-                    </div>
-                    
+                  <Link href="/shop"><button className='px-6 py-2 rounded-md bg-black text-white font-bold flex gap-2 items-center'>Shop <ShoppingCart/></button></Link>
                 </div>
-
+              </div>
           </div>
     </div>
   )

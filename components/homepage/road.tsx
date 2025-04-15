@@ -2,7 +2,7 @@ import React from 'react'
 
 const Road = () => {
   return (
-    <div className='flex items-center h-screen justify-center w-full px-28'>
+    <div className='flex items-center h-screen justify-center w-full'>
         <div className='text-center flex items-center justify-center w-full h-[60%] bg-[url("/home/pine.jpg")] bg-cover bg-center'>
            <div>
                 <p className='mb-8 text-xs md:text-xl text-black/80'>Elevate Your Commute</p>

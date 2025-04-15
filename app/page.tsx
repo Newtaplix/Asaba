@@ -14,13 +14,15 @@ const page = () => {
     <>
       <Navbar/>
       <HeroSection/>
-      <Samples/>
-      <ProductsSlider/>
-      <ImageDiv/>
-      <Preview/>
-      <Partners/>
-      <Road/>
-      <CallToAction/>
+      <div className='max-w-300 mx-auto overflow-hidden'>
+        <Samples/>
+        <ProductsSlider/>
+        <ImageDiv/>
+        <Preview/>
+        <Partners/>
+        <Road/>
+        <CallToAction/>
+      </div>
       <FooterLV/>
     </>
   )

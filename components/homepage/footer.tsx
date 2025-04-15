@@ -2,8 +2,8 @@ import React from 'react'
 
 const FooterLV = () => {
   return (
-    <div className="bg-black/90 py-30 px-28 text-white flex justify-left mt-20">
-        <div className='flex gap-10 justify-between w-[80%]'>
+    <div className="bg-black/90 py-30 text-white flex justify-left mt-20">
+        <div className='flex gap-10 justify-between mx-auto w-300'>
           <div>
               <h1>WhatsApp</h1>
           </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Preview = () => {
   return (
-    <div className='px-28 h-screen flex items-center'>
+    <div className='h-screen flex w-full items-center'>
         <div className='h-[60%] flex items-center bg-black/80 w-full bg-[url("/home/bgl.jpg")] bg-cover bg-right'>
             <div className='p-3 w-[30%]'>
                 <p className='para text-white'>Luxury Meets Performance</p>

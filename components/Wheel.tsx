@@ -5,31 +5,26 @@ import { motion, Variants } from 'framer-motion'
 const animateSVG: Variants = {
     initial: { 
         pathLength: 0,
-        opacity: 1,
-        scale: 0,
-        translateX: '0',
+        opacity: 0,
 
         }  ,
 
     visible: { 
         pathLength: 1, 
+        opacity: 1,
         transition: { 
-            duration: 10,
+            duration: 2,
             ease: "easeInOut",
-            repeat: 2,
-        },
-        rotate: 360,
-        scale: 0.8,
-        translateX: '100%',
-        opacity: 0,
+            repeat: Infinity,
+        }
     }
 }
 
 const Wheel = () => {
   return (
-    <div className='bg-white mt-10 text-left w-full bg-green-500'>
+    <div className='text-white bg-transparent mt-10 cursor-pointer'>
         <motion.svg 
-        width="200" height="200"
+        width="32" height="32"
         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <motion.path
                 variants={animateSVG}

@@ -14,7 +14,7 @@ const Samples = () => {
             <p className='para'>Unlock the Secrets of Tire Performance. Explore our Cutting-Edge Innovations</p>
         </div>
 
-        <div className="flex gap-5 px-28">
+        <div className="flex gap-5">
             <div className="flex-1 bg-gray-900/30 h-100 relative">
                 <Image src="/home/sample1.jpg" fill alt="sample"/>
             </div>

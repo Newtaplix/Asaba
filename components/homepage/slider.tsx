@@ -12,7 +12,7 @@ const ProductsSlider = () => {
             <h1 className="heading">Tire Solutions</h1>
             <p className="para">Unleash the True Potential of Your Ride with Our Top-Tire Offerings</p>
         </div>
-        <div className="w-full px-28 gap-4 flex mt-3">
+        <div className="w-full gap-4 flex mt-3">
             <div className='pt-5 border flex-1 flex flex-col items-center h-100'>
               <div className='w-full mt-10 h-[50%] relative'>
                 <Image fill src={'/home/price1.jpg'} alt='Options'/>
