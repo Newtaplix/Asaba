@@ -7,7 +7,7 @@ const ImageDiv = () => {
         <div className="bg-gray-200/20 flex-1 h-150 relative">
           <Image fill src="/home/big1.jpg" alt="Car Sample"/>
         </div>
-        <div className="bg-gray-200/20 flex-1 h-150 relative">
+        <div className="hidden md:block bg-gray-200/20 flex-1 h-150 relative">
           <Image fill src="/home/big1.jpg" alt="Car Sample"/>
         </div>
     </div>

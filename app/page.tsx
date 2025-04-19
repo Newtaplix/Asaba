@@ -14,7 +14,7 @@ const page = () => {
     <>
       <Navbar/>
       <HeroSection/>
-      <div className='max-w-300 mx-auto overflow-hidden'>
+      <div className='w-full md:max-w-260 px-2 lg:max-w-300 mx-auto overflow-hidden'>
         <Samples/>
         <ProductsSlider/>
         <ImageDiv/>

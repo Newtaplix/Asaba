@@ -18,9 +18,6 @@ const Navbar = () => {
               </ul>
           </div>
         </div>
-        <div className='w-full bg-white py-10 px-10'>
-
-        </div>
     </div>
   )
 }
