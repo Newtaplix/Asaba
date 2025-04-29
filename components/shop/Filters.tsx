@@ -3,11 +3,13 @@ import React, { useState } from 'react'
 import { ArrowUp , ArrowDown} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import SaleItems from './SaleItems'
+import { motion } from 'framer-motion'
 
 
 const Filters = () => {
     const [openFilterset, setOpenFilterSet] = useState([""])
     const [selectedFilter, setSelectedFilter] = useState<string>("")
+    console.log(selectedFilter)
     const Filters = [
         {
             title: "Model",
@@ -117,11 +119,12 @@ const Filters = () => {
                     <p key={item}>{item}</p>
                     )
                 }
+                {selectedFilter}
             </div>
             <div>
                {
                     Filters.map((filter) => (
-                        <div key={filter.title} className='border-b-1 mt-1 border-gray-300 px-2'>
+                        <motion.div key={filter.title} className='border-b-1 mt-1 border-gray-300 px-2'>
                             <div onClick={() => {
                                 if(openFilterset.includes(filter.title)){
                                     const newArr = openFilterset.filter(cont => cont !== filter.title)
@@ -137,7 +140,9 @@ const Filters = () => {
                                     openFilterset.includes(filter.title) ? <ArrowUp size={16}/> : <ArrowDown size={16}/>
                                 }
                             </div>
-                            <div className={cn("h-0 transition-all overflow-y-hidden", openFilterset.includes(filter.title) ? "h-fit" : null)}>
+                            <motion.div className={cn("h-0 transition-all overflow-y-hidden", openFilterset.includes(filter.title) ? "h-fit" : null)}>
+
+                                <input className='w-full px-2 py-2 rounded-md' placeholder='Search'/>
                             {
                                 filter.options.map((opt) => (
                                     <label key={opt.value} htmlFor={opt.value}
@@ -155,13 +160,13 @@ const Filters = () => {
                                     </label>
                                 ))
                             }
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     ))
                }
             </div>
         </div>
-        <SaleItems filter = {selectedFilter}/>
+        <SaleItems/>
     </div>
   )
 }
