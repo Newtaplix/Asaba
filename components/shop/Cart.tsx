@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion} from 'framer-motion'
 import CartStore from '@/store/Store'
 import Image from 'next/image'
@@ -14,6 +14,20 @@ const CartComponent = ({ open }:OpenProp) => {
   const { items, removeItem } = CartStore()
 
   const [isHovered, setIsHovered] = useState<number>()
+
+  const [total, setTotal] = useState<number>()
+
+
+  useEffect(() => {
+    const calculateTotal = () => {
+      const total = items.reduce((sum, item) => sum + item.price, 0)
+      setTotal(total)
+    }
+    calculateTotal()
+  }, [items])
+
+ 
+
   return (
     <>
 
@@ -31,7 +45,7 @@ const CartComponent = ({ open }:OpenProp) => {
             height: 0
           }}
            className='bg-white overflow-hidden shadow-lg text-white right-0 top-0 p-2 h-100 z-10 absolute w-full'>
-           <div className='w-full h-85 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-y-scroll'>
+           <div className='w-full h-75 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-y-scroll'>
             {
                 (items.length === 0) ?
                 <div className='flex w-full h-full items-center justify-center text-center'>
@@ -66,9 +80,9 @@ const CartComponent = ({ open }:OpenProp) => {
               }
            
            </div>
-           <div className='w-full p-2 absolute bottom-1 '>
+           <div className='w-full flex p-2 bottom-1 items-center gap-3'>
+                <h1 className='text-black font-bold'>Total: ${total}</h1>
                 <div>
-
                   <button className='p-2 text-white bg-green-500 font-bold rounded-md'>Proceed with Purchase</button>
                 </div>
            </div>

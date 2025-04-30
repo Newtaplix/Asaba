@@ -13,7 +13,7 @@ const HeroSection = () => {
              <div className='w-full h-full bg-red-500'>
                 <video autoPlay muted loop playsInline className='w-full' src="/home/vidbg.mp4"></video>
              </div>
-             <div className="absolute w-full h-full top-0 bg-black/20"></div>
+             <div className="absolute w-full h-full top-0 bg-black/40"></div>
               <div className='mx-auto w-300 h-full bg-transparent text-left flex items-center absolute'>
                 <div className='flex justify-between'>
                   <div className='max-w-200 text-white'>

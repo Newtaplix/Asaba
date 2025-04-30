@@ -1,14 +1,14 @@
 'use client'
 import React, { useState } from 'react'
-import { ArrowUp , ArrowDown} from 'lucide-react'
+import { ArrowUp , ArrowDown, X} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import SaleItems from './SaleItems'
 import { motion } from 'framer-motion'
 
 
 const Filters = () => {
-    const [openFilterset, setOpenFilterSet] = useState([""])
-    const [selectedFilter, setSelectedFilter] = useState<string>("")
+    const [openFilterset, setOpenFilterSet] = useState<string[]>([])
+    const [selectedFilter, setSelectedFilter] = useState<string[]>([])
     console.log(selectedFilter)
     const Filters = [
         {
@@ -113,13 +113,17 @@ const Filters = () => {
     <div className='flex gap-4'>
         <div className='w-[25%]'>
             <div><p className='text-gray-500'>Filter</p></div>
-            <div>
+            <div className='flex flex-wrap gap-2'>
                 {
-                    openFilterset.map((item) => 
-                    <p key={item}>{item}</p>
+                    selectedFilter.map((item, index) => 
+                    <p key={item} className='bg-gray-200 px-2 rounded-full gap-2 items-center flex w-fit'>{item}
+                    <button onClick={() => {
+                        const newArr = selectedFilter.filter((_, i) => i !== index)
+                        setSelectedFilter(newArr)
+                    }}><X className='size-4 rounded-full bg-gray-300 cursor-pointer'/></button>
+                    </p>
                     )
                 }
-                {selectedFilter}
             </div>
             <div>
                {
@@ -142,19 +146,23 @@ const Filters = () => {
                             </div>
                             <motion.div className={cn("h-0 transition-all overflow-y-hidden", openFilterset.includes(filter.title) ? "h-fit" : null)}>
 
-                                <input className='w-full px-2 py-2 rounded-md' placeholder='Search'/>
+                                <input className='w-full px-2 py-1 rounded-md border-2 border-gray-300' placeholder='Search'/>
                             {
                                 filter.options.map((opt) => (
                                     <label key={opt.value} htmlFor={opt.value}
                                         className='w-full justify-between flex text-[16px] items-center mt-1 pl-2'>
                                             <span>{opt.label}</span>
-                                            <input type="checkbox" className='bg-black size-4 rounded-md' name="model" value={opt.value} onChange={(e) => 
+                                            <input 
+                                            type="checkbox" className='bg-black size-4 rounded-md' name="model" value={opt.value} onChange={(e) => 
                                                 {
                                                     if(e.target.checked){
-                                                        setSelectedFilter(e.target.value)
+                                                        setSelectedFilter(prev => [...prev, e.target.value])
                                                     }else{
-                                                        setSelectedFilter("")
+                
+                                                        const newArr =selectedFilter.filter(() => opt.value !== e.target.value )
+                                                        setSelectedFilter(newArr)
                                                     }
+
                                                 }
                                             } id={opt.value} />
                                     </label>
@@ -166,7 +174,7 @@ const Filters = () => {
                }
             </div>
         </div>
-        <SaleItems/>
+        <SaleItems filters = { selectedFilter }/>
     </div>
   )
 }
