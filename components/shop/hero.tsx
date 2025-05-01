@@ -6,7 +6,7 @@ const ShopHero = () => {
   return (
     <div className="h-screen relative flex flex-col items-center w-full bg-[url('/home/pine.jpg')] bg-cover bg-center justify-center">
         <div className="absolute w-full h-full bg-black/30"/>
-       <div className='absolute inset-0 bg-transparent flex flex-col items-center justify-center'>
+       <div className='absolute inset-0 bg-transparent flex flex-col md:items-center justify-center'>
         <div className="text-center">
                 <h1 className="heading text-white">Style Starts Here</h1>
                 <p className="text-2xl text-white ">Discover the freshest picks, hottest deals, and timeless classics all in one place</p>

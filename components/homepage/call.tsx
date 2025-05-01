@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const CallToAction = () => {
   return (
-    <div className='h-screen flex flex-col text-center justify-center'>
+    <div className='flex flex-col text-center justify-center'>
         <div>
             <p className='para2'>Optimizing Your Drive</p>
             <h1 className='heading'>The Pinnacle Of Tire Craftsmanship</h1>
