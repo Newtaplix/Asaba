@@ -11,7 +11,7 @@ const ShopPage = () => {
   return (
    <>
         <ShopNav/>
-        <div className='md:max-w-270 lg:max-w-320 w-full m-auto'>
+        <div className='w-full md:max-w-270 lg:max-w-320 w-full m-auto'>
           <Content/>
         </div>
         <FooterLV/>

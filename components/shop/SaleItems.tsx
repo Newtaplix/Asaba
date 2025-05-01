@@ -106,13 +106,13 @@ const SaleItems = ({ filters }:FilterProp) => {
 
 
   return (
-    <div className='w-full grid md:grid-cols-2 lg:grid-cols-3 p-5 gap-6 relative'>
+    <div className='w-full grid grid-cols-2 lg:grid-cols-3 p-5 gap-6 relative'>
       {
         filteredGoods.length > 0 ?
         
         filteredGoods.map((item, i) => (
           <div onMouseEnter={() => handlehover(i)} onMouseLeave={() => handlehover(-1)} key={i}>
-            <motion.div className='pt-5 border h-75 flex-1 flex relative flex-col justify-center items-center rounded-xl bg-gray-300 relative'>
+            <motion.div className='pt-5 border h-50 md:h-75 flex-1 flex relative flex-col justify-center items-center rounded-xl bg-gray-300 relative'>
                 <Image fill src={item.image} alt='Options'/>
                <AnimatePresence>
                 {
@@ -154,7 +154,7 @@ const SaleItems = ({ filters }:FilterProp) => {
         
         ContentList.map((item, i) => (
           <div onMouseEnter={() => handlehover(i)} onMouseLeave={() => handlehover(-1)} key={i}>
-            <motion.div className='pt-5 border h-75 flex-1 flex relative flex-col justify-center items-center rounded-xl bg-gray-300 relative'>
+            <motion.div className='pt-5 border h-50 md:h-75 flex-1 flex relative flex-col justify-center items-center rounded-xl bg-gray-300 relative'>
                 <Image fill src={item.image} alt='Options'/>
                <AnimatePresence>
                 {

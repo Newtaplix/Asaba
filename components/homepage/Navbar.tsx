@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 
 const Navbar = () => {
@@ -17,12 +18,12 @@ const Navbar = () => {
               <AnimatePresence>
                 <motion.ul 
                  className="flex w-full overflow-hidden mt-3 lg:flex-row lg:w-fit gap-4 text-white">
-                  <li>Home</li>
-                  <li>Shop</li>
+                  <li><Link href={"/"}>Home</Link></li>
+                  <li><Link href={"/shop"}>Shop</Link></li>
                   <li>About</li>
                   <li>Contact</li>
-                  <li>Login</li>
-                  <li>SignUp</li>
+                  <li><Link href={"/auth/login"}>Login</Link></li>
+                  <li><Link href={"/auth/signup"}>SignUp</Link></li>
                 </motion.ul>
               </AnimatePresence>
           </div>
@@ -49,13 +50,13 @@ const Navbar = () => {
                   height: 0
                 }}
                 layout
-                 className="flex w-full overflow-hidden mt-3 text-center flex-col lg:flex-row lg:w-fit gap-4 text-white">
-                  <li className='mt-8 mb-3'>Home</li>
-                  <li className='mb-3'>Shop</li>
-                  <li className='mb-3'>About</li>
-                  <li className='mb-3'>Contact</li>
-                  <li className='mb-3'>Login</li>
-                  <li className='mb-3'>SignUp</li>
+                 className="flex px-2 w-full overflow-hidden mt-3 text-left flex-col lg:flex-row lg:w-fit gap-4 text-white">
+                  <li className='mt-3 '><Link href={"/"}>Home</Link></li>
+                  <li className='mt-3 '><Link href={"/shop"}>Shop</Link></li>
+                  <li className='mt-3 '>About</li>
+                  <li className='mt-3 '>Contact</li>
+                  <li className='mt-3 '><Link href={"/auth/login"}>Login</Link></li>
+                  <li className='mt-3 '><Link href={"/auth/signup"}>SignUp</Link></li>
                 </motion.ul>
               </AnimatePresence>
           </div>

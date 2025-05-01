@@ -70,7 +70,7 @@ const CartComponent = ({ open }:OpenProp) => {
                                     }
                                 </AnimatePresence>
                               </motion.div>
-                              <div className='text-xl mt-1'>
+                              <div className='md:text-xl mt-2'>
                                 <h1 className='text-black'>{good.name}</h1>
                                 <p className='text-gray-600'>${good.price}</p>
                                 <p className='text-gray-600'>{good.material}</p>

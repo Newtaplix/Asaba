@@ -2,7 +2,7 @@ import React from 'react'
 
 const SecondNav = () => {
   return (
-    <div className='w-full p-3 bg-white flex mt-10 justify-between'>
+    <div className='w-full p-3 bg-white flex hidden justify-between'>
         <div>
           <h1>Number of products [100]</h1>
         </div>
