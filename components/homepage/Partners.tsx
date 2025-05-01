@@ -1,9 +1,27 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Partners = () => {
   return (
-    <div className='text-center w-full justify-center mt-20'>
+    <motion.div 
+    initial={{
+      opacity: 0,
+      y: 20
+      }}
+      whileInView= {{
+          opacity: 1,
+          y: 0,
+          transition: {
+              duration: 0.5
+          }
+      }}
+      viewport={{
+          once:true,
+          amount: 0.5
+      }}
+    className='text-center w-full justify-center mt-20'>
         <p className='para'>Our Trusted Partners</p>
         <h1 className="heading">Powering The Future Of Mobility</h1>
         <p className="para">Driving Innovation: Discover the Synergy of Our Tire Solutions and Renowned Partner Brands</p>
@@ -22,7 +40,7 @@ const Partners = () => {
             </div>
 
         </div>
-    </div>
+    </motion.div>
   )
 }
 

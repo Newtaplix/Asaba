@@ -2,7 +2,7 @@
 import React from 'react'
 import { ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
-
+import { motion } from 'framer-motion'
 
 const HeroSection = () => {
 
@@ -18,7 +18,24 @@ const HeroSection = () => {
                 <div className=''>
                   <div className='text-left px-2 mt-32 w-[90%] md:mt-0 lg:max-w-200 text-white'>
                       <div>
-                            <h1 className="font-bold text-white mb-3 md:mb-0 text-5xl md:text-7xl">Smart Wheels for a Smarter World</h1>
+                            <motion.h1
+                            initial={{
+                              opacity: 0,
+                              x: -10
+                            }}
+                            whileInView={{
+                              opacity: 1,
+                              x: 0,
+                              transition: {
+                                duration: 0.2
+                              }
+
+                            }}
+                            viewport={{
+                              once: true,
+  
+                            }}
+                             className="font-bold text-white mb-3 md:mb-0 text-5xl md:text-7xl">Smart Wheels for a Smarter World</motion.h1>
                         </div>
                         <div>
                             <p className='text-xl text-gray-200'>Discover durable, high performance tires for any vehicle and road condition</p>
